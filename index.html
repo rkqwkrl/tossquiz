@@ -1,5 +1,64 @@
-<h2 data-ke-size="size26">토스 행운 퀴즈 바로가기</h2>
-<h3 class="quiz_detail_copy_button_area__3N2WP" data-ke-size="size23"><a class="quiz_detail_go_app_button__AQJWQ" title="토스 행운 퀴즈 풀기" href="supertoss://lab?url=https%3A%2F%2Fservice.toss.im%2Flucky-quiz-v2%2Fquiz-list%3Freferrer%3Dbenefit_tab" target="_blank" rel="noopener noreferrer">행운 퀴즈 앱으로 이동</a></h3>
-<p data-ke-size="size16">&nbsp;</p>
-<p>[##_Image|kage@br8sk3/btrVNf9iy6K/khhrAGE3ndyNWkWfHounnk/img.png|CDM|1.3|{"originWidth":800,"originHeight":200,"style":"alignCenter","alt":"토스로고","caption":"토스로고","filename":"토스로고.png"}_##]</p>
-<script>location.href='supertoss://lab?url=https%3A%2F%2Fservice.toss.im%2Flucky-quiz-v2%2Fquiz-list%3Freferrer%3Dbenefit_tab';</script>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>카톡 공유</title>
+<script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+    <input type="button" onClick="sendLinkCustom();" value="Custom"/>
+    <input type="button" onClick="sendLinkDefault();" value="Default"/>
+
+<script type="text/javascript">
+    function sendLinkCustom() {
+        Kakao.init("cb0bc9138bf95e950b93a724e4834fe3");
+        Kakao.Link.sendCustom({
+            templateId: 88454
+        });
+    }
+</script>
+
+<script>
+try {
+  function sendLinkDefault() {
+    Kakao.init('cb0bc9138bf95e950b93a724e4834fe3')
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '딸기 치즈 케익',
+        description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+        imageUrl:
+          'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+        link: {
+          mobileWebUrl: 'https://developers.kakao.com',
+          webUrl: 'https://developers.kakao.com',
+        },
+      },
+      social: {
+        likeCount: 286,
+        commentCount: 45,
+        sharedCount: 845,
+      },
+      buttons: [
+        {
+          title: '웹으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+        {
+          title: '앱으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+      ],
+    })
+  }
+; window.kakaoDemoCallback && window.kakaoDemoCallback() }
+catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) }
+</script>
+   
+</body>
+</html>
